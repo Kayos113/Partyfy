@@ -1,31 +1,124 @@
 .App {
-  text-align: center;
+  background-color: var(--ad-dark-background);
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 8vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} */
+
+.App-body {
+ min-height: 85vh;
+ background-color: var(--ad-dark-background)
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--ad-dark-background);
+  min-height: 15vh;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  color: var(--ad-yellow);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Button {
+  font-family: "Montserrat", sans-serif;
+  /* font-style: italic; */
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.Input-field {
+    margin-top: 7%;
+}
+
+.Label {
+  margin: 0 1rem 0;
+}
+
+.Login-submit {
+  height: 6vh;
+  width: 16vw;
+  border: none;
+  border-radius: 5rem;
+}
+
+.Logo {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: var(--ad-darker-background);
+}
+.Logo>img {
+  border-radius: 100%;
+  border: 2px black solid;
+  animation: App-logo-spin linear 10s infinite;
+}
+.Logo>h1 {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.Nav-bar {
+  display: flex;
+  background-color: var(--spoti-green);
+  border-top: 2px solid black;
+  color: var(--ad-blue);
+}
+
+.Nav-bar>p {
+  padding: .5rem 1rem .5rem;
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Nav-bar>.active {
+  background-color: var(--ad-dark-background);
+  color: var(--ad-yellow);
+  /* animation: zoom-in; */
+}
+
+.Nav-tab {
+  cursor: pointer;
+}
+
+.Tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ad-light-background);
+}
+
+.Textfield {
+  height: 3rem;
+  width: 25vw;
+  border-radius: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: inherit;
+  background-color: var(--ad-light-background);
+  color: black;
+  border: none;
+}
+
+.Password {
+  margin-top: 3%;
 }
 
 @keyframes App-logo-spin {

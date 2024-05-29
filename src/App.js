@@ -11,9 +11,9 @@ function App() {
   function tabClick(tabName) {
     let index = 0;
     switch(tabName) { //If the switch is put in reverse tab order, each level of case can add one to an index int and make it easier to add future tabs because all that needs to happen is add an incrementing case at the top of the switch
-      case "search":  index++;
+      case "search":  index=2;
                       break;
-      case "queue":   index+=2;
+      case "queue":   index=1;
                       break;
       case "home":
       default:        index+=0;

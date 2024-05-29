@@ -12,7 +12,9 @@ function App() {
     let index = 0;
     switch(tabName) { //If the switch is put in reverse tab order, each level of case can add one to an index int and make it easier to add future tabs because all that needs to happen is add an incrementing case at the top of the switch
       case "search":  index++;
-      case "queue":   index++;
+                      break;
+      case "queue":   index+=2;
+                      break;
       case "home":
       default:        index+=0;
     }
@@ -20,7 +22,6 @@ function App() {
     let hiddenArr = new Array(hiddenTabs.length).fill(" hidden");
     navArr[index] += " active";
     hiddenArr[index] = "";
-    console.log(hiddenArr);
     setNavClasses(navArr);
     setHiddenTabs(hiddenArr);
   }
@@ -38,8 +39,10 @@ function App() {
           <p className={navClasses[2]} onClick={() => tabClick("search")} name="search">Search</p>
         </div>
       </header>
+
       <section className="App-body">
-        <div className={"Login Tab"+hiddenTabs[0]}>
+
+        <div className={"Login Tab hidden"}>
           <div className="Username Input-field">
             <p className="Label">Username/Email</p>
             <input type="text" className="Textfield" id="username"/>
@@ -52,10 +55,19 @@ function App() {
             <input type="submit" className="Login-submit Button" id="login"/>
           </div>
         </div>
+
+        <div className={"Home Tab"+hiddenTabs[0]}>
+          <p>Start a Party Room</p>
+          <p>Join a Party Room</p>
+          <input type="number" pattern="/d{4}" />
+        </div>
+
         <div className={"Queue Tab"+hiddenTabs[1]}>
         </div>
+
         <div className={"Search Tab"+hiddenTabs[2]}>
         </div>
+
       </section>
     </div>
   );
